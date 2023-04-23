@@ -1,8 +1,8 @@
 {
-  "name": "foodstyles-challange-frontend",
+  "name": "todo-list-challange-ui",
   "version": "1.0.0",
   "private": true,
-  "description": "foodstyles-challange-frontend",
+  "description": "Todo list challange UI",
   "author": "aricionur",
   "keywords": [
     "gatsby"
@@ -10,12 +10,18 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby clean && gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.12",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.1",
     "gatsby": "^5.9.0",
+    "graphql": "^16.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
