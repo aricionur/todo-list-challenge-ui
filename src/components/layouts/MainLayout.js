@@ -1,13 +1,14 @@
 import * as React from "react"
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client"
 
-const Layout = ({ children }) => {
-  const client = new ApolloClient({
-    uri: "http://localhost:4000/",
-    cache: new InMemoryCache(),
-  })
+import { Navbar } from "../core/Navbar"
 
-  return <ApolloProvider client={client}>{children}</ApolloProvider>
+const MainLayout = ({ children }) => {
+  return (
+    <>
+      <Navbar />
+      {children}
+    </>
+  )
 }
 
-export default Layout
+export default MainLayout

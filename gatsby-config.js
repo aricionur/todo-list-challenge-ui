@@ -3,8 +3,11 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `foodstyles-challange-frontend`,
+    title: `todo-list-challange-frontend`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [],
+  flags: {
+    DEV_SSR: true,
+  },
 }

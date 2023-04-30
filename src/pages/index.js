@@ -1,9 +1,9 @@
-import * as React from "react"
+import React from "react"
 
 import MainLayout from "../components/layouts/MainLayout"
 import { Todos } from "../components/subjectRelated/todos/components/Todos"
 
-const UsersPage = () => {
+const HomePage = () => {
   return (
     <MainLayout>
       <Todos />
@@ -11,4 +11,4 @@ const UsersPage = () => {
   )
 }
 
-export default UsersPage
+export default HomePage
