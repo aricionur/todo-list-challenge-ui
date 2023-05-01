@@ -13,9 +13,11 @@ import { useMutationMarkTodoCompleted } from "../../../../graphql/todos/useMutat
 import { useMutationMarkTodoUncompleted } from "../../../../graphql/todos/useMutationMarkTodoUncompleted"
 import { useMutationDeleteTodo } from "../../../../graphql/todos/useMutationDeleteTodo"
 import { useTodos } from "../context/TodosContext"
+import { useAuth } from "../../auth/context/AuthContext"
 
 export const TodoList = () => {
-  const { todos, loading, error } = useQueryGetTodos()
+  const { user } = useAuth()
+  const { todos, loading, error, refetch } = useQueryGetTodos()
   const { markTodoCompleted } = useMutationMarkTodoCompleted()
   const { markTodoUncompleted } = useMutationMarkTodoUncompleted()
   const { deleteTodo } = useMutationDeleteTodo()
@@ -33,8 +35,8 @@ export const TodoList = () => {
   }
 
   useEffect(() => {
-    if (todos?.length) onChange({ todos })
-  }, [todos])
+    refetch()
+  }, [user])
 
   return (
     <>

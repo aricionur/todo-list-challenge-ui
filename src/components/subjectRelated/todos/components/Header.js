@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <Box>
       <Box width="100%" m={2}>
-        <img src={checkIcon} width="40px" height="32px" margin="0 19px 25px 0" object-fit="contain" />
+        <img src={checkIcon} width="40px" height="32px" margin="0 19px 25px 0" object-fit="contain" alt="" />
       </Box>
 
       <Box width="100%" m={2}>

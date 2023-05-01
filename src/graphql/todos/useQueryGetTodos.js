@@ -11,6 +11,6 @@ export const GET_TODOS = gql`
 `
 
 export const useQueryGetTodos = () => {
-  const { data, loading, error } = useQuery(GET_TODOS)
-  return { todos: !!data && data.listTodos, loading, error }
+  const { data, loading, error, refetch } = useQuery(GET_TODOS)
+  return { todos: !!data && data.listTodos, loading, error, refetch }
 }
